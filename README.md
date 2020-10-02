@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio-Dextra
 
-## Available Scripts
+## Desafio
 
-In the project directory, you can run:
+Queremos que você desenvolva um catálogo de quadrinhos da Marvel Comics, e, para isso será necessário que você desenvolva o front-end desta aplicação.
 
-### `npm start`
+A Marvel Comics disponibiliza uma API onde estes dados podem ser encontrados, você deve se registrar na plataforma da Marvel para ter acesso a sua API, de forma gratuita, através do link:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://developer.marvel.com.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Requisitos necessários:
 
-### `npm test`
+Listagem dos quadrinhos
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Título, imagem, thumbnail e autores.
 
-### `npm run build`
+Paginação dos quadrinhos
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Grid dos quadrinhos em 10 e 10
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Pesquisa por personagem
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pesquisa através do nome do personagem em inglês
 
-### `npm run eject`
+Detalhe dos quadrinhos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Botão ou mecanismo similar para abertura de uma nova página com detalhes do quadrinho.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Extras:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Boas práticas de codificação
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Cobertura de testes
 
-## Learn More
+Aplicação responsiva
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Aguardamos o código via GitHub até dia 07/10 às 17h00.
