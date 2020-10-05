@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Marvel";
+  src: url("./assets/MarvelRegular-Dj83.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Body";
+  src: url("./assets/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Title";
+  src: url("./assets/Roboto-BoldCondensed.ttf");
+}
+
+.header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: rgb(239, 19, 29);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo{
+  color: white;
+  font-family: "Marvel";
+  font-size: 40px;
+  margin: 0px;
+  display: flex;
+  align-self: flex-end;
+}
+
+.label-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.input-header{
+  width: 85%;
+  border: none;
+  font-family: "Roboto-Body";
+  font-size: 12px;
+  color: rgb(239, 19, 29);
+  outline: none;
+}
+
+.search-icon{
+  width: 25px;
+  cursor: pointer;
+}
+
+::placeholder{
+  color: rgba(239, 19, 29, 0.6);
+}
+
+.main-comics{
+  margin-top: 60px;
+}
+
+@media only screen and (min-width: 800px) {
+  .header{
+    height: 100px;
+  }
+  .logo{
+    font-size: 80px;
+  }
+  .input-header{
+    font-size: 15px;
+    width: 90%;
+  }
+  .search-icon{
+    width: 45px;
+  }
+  .main-comics{
+    margin-top: 110px;
+  }
+}
