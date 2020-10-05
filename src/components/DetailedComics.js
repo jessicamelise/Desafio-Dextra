@@ -1,11 +1,15 @@
 import React from 'react';
-// import '../App.css';
+import { Header } from "../components/Header";
+import '../App.css';
 
 export const DetailedComics = () => {
  
   return (
-    <div>
-      Olá
-    </div>
+    <>
+      <Header />
+      <div className="main-comics">
+        Olá
+      </div>
+    </>
   );
 }

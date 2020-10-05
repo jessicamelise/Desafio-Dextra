@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import '../App.css';
+import '../App.css';
+import { Header } from "../components/Header";
 import { loadComicsApi } from "../loadApis/api.js";
 
 export const Comics = () => {
@@ -12,18 +13,21 @@ export const Comics = () => {
   }, []);
 
   return (
-    <div>
-      {comics.map((eachComic, index) => (
-        <div key={index}>
-          <p>{eachComic.id}</p>
-          <p>{eachComic.title}</p>
-          <img alt={eachComic.title} scr={`${eachComic.thumbnail.path}.${eachComic.thumbnail.extension}`}></img>
-          {eachComic.creators.items.length === 0 ? 
-            <p>não encontrado</p> : 
-            eachComic.creators.items.map((eachCreator, index) => <p key={index}>{eachCreator.name}</p>
-          )}
-        </div>
-      ))}
-    </div>
+    <>
+      <Header/>
+      <div className="main-comics">
+        {comics.map((eachComic, index) => (
+          <div key={index}>
+            <p>{eachComic.id}</p>
+            <p>{eachComic.title}</p>
+            <img alt={eachComic.title} scr={`${eachComic.thumbnail.path}.${eachComic.thumbnail.extension}`}></img>
+            {eachComic.creators.items.length === 0 ? 
+              <p>não encontrado</p> : 
+              eachComic.creators.items.map((eachCreator, index) => <p key={index}>{eachCreator.name}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

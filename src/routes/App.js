@@ -1,5 +1,4 @@
 import React from 'react';
-// import '../App.css';
 import { Switch, Route, HashRouter } from "react-router-dom";
 import { Comics } from "../components/Comics";
 import { DetailedComics } from "../components/DetailedComics";
@@ -10,7 +9,7 @@ function App() {
     <HashRouter>
       <Switch>
         <Route path="/" exact={true} component={Comics} />
-        <Route path="/detailed" component={DetailedComics} />
+        <Route path="/detailed" component={DetailedComics} />        
       </Switch>
     </HashRouter>
   );
