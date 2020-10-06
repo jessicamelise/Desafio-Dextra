@@ -30,7 +30,6 @@
   justify-content: space-around;
   max-width: 900px;
   width: 100%;
-  height: 100%;
 }
 
 .logo{
@@ -72,6 +71,52 @@
 
 .main-comics{
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.max-width-main{
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-self: center;
+}
+
+.thumbnails{
+  height: 180px;
+}
+
+.each-comic{
+  width: 100%;
+  text-align: center;
+}
+
+.list-creator{
+  list-style: none;
+}
+
+.max-width-button {
+  max-width: 900px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.button-comics{
+  width: 40%;
+  background-color: rgb(239, 19, 29);
+  border: none;
+  border-radius: 2px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto-Title";
+  font-size: 20px;
+  outline: none;
 }
 
 @media only screen and (min-width: 800px) {
@@ -90,5 +135,18 @@
   }
   .main-comics{
     margin-top: 110px;
+    justify-content: center;
+  }
+  .max-width-main{
+    flex-flow: wrap;
+  }
+  .each-comic{
+    width: 20%;
+  }
+  .thumbnails{
+    height: 140px;
+  }
+  .max-width-button {
+    width: 30%;
   }
 }
