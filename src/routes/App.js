@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, HashRouter } from "react-router-dom";
+import { Switch, Route, HashRouter, Redirect } from "react-router-dom";
 import { Comics } from "../components/Comics";
 import { DetailedComics } from "../components/DetailedComics";
 
@@ -8,7 +8,9 @@ function App() {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/" exact={true} component={Comics} />
+        <Redirect exact from='/' to='/home'/>
+        <Route path="/home" exact={true} component={Comics} />
+        <Route path="/home/:page" component={Comics} />
         <Route path="/detailed" component={DetailedComics} />        
       </Switch>
     </HashRouter>
