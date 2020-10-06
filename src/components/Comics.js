@@ -30,12 +30,11 @@ export const Comics = () => {
                 className="thumbnails"
               >
               </img>
-              <p>{eachComic.id}</p>
-              <p>Title: {eachComic.title}</p>
+              <p className="p-margin p-font-bold">{eachComic.title}</p>
               {eachComic.creators.items.length === 0 ?
-                <p>Creators: Não Encontrado</p> :
-                <p>Creators:
-                  {eachComic.creators.items.map((creator, index) => <li className="list-creator" key={index}>{creator.name}</li>)}
+                <p className="p-margin"></p> :
+                <p className="p-margin p-font-body">
+                  {eachComic.creators.items.map((creator, index) => <span className="list-creator" key={index}>{creator.name}/ </span>)}
                 </p>
               }
             </div>
