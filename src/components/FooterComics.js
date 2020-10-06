@@ -7,7 +7,7 @@ export const FooterComics = (props) => {
   return (
     <div className="max-width-button">
       <Button
-        className="button-comics"
+        className={props.page <= 0 ? "diplay-none" : "button-comics"}
         name="Previous"
         onClick={() => props.previous("Previous")}
       />
