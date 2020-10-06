@@ -115,7 +115,7 @@
 }
 
 .button-comics {
-  width: 40%;
+  width: 35%;
   background-color: rgb(239, 19, 29);
   border: none;
   border-radius: 2px;
@@ -139,6 +139,10 @@
 .p-font-body {
   font-family: "Roboto-Body";
   font-size: 10px;
+}
+
+.p-align {
+  align-self: center;
 }
 
 @media only screen and (min-width: 800px) {
@@ -173,5 +177,8 @@
   }
   .max-width-button {
     width: 30%;
+  }
+  .button-comics{
+    width: 40%;
   }
 }
