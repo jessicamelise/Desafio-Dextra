@@ -13,7 +13,8 @@ function App() {
         <Route path="/home" exact={true} component={Comics} />
         <Route path="/home/:page" component={Comics} />
         <Route path="/detailed/:id" component={DetailedComics} />
-        <Route path="/search/:character" component={SearchCharacters} />      
+        <Route path="/search/:character" component={SearchCharacters} />
+        <Route path="/search/:character/:page" component={SearchCharacters} />      
       </Switch>
     </HashRouter>
   );

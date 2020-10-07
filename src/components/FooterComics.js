@@ -12,7 +12,7 @@ export const FooterComics = (props) => {
         onClick={() => props.previous("Previous")}
       />
       <Button
-        className="button-comics"
+        className={props.count < 10 ? "diplay-none" : "button-comics"}
         name="Next"
         onClick={() => props.next("Next")}
       />

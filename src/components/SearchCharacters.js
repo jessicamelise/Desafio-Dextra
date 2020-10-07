@@ -3,12 +3,15 @@ import '../App.css';
 import { Header } from "../components/Header";
 import { ReturnPage } from "../components/ReturnPage.js";
 import { loadCharactersApi, loadCharactersSearchApi } from "../loadApis/api.js";
-// import { CharactersInformation } from "../components/CharactersInformation.js"
+import { useHistory } from 'react-router-dom';
+import { FooterComics } from "./FooterComics.js";
 
 export const SearchCharacters = ({ match }) => {
   const [getId, setGetId] = useState("");
   const [getComics, setGetComics] = useState(null);
   const [notFound, setNotfound] = useState("");
+  const [changePage, setChangePage] = useState(0);
+  let history = useHistory();
 
   useEffect(() => {
     loadCharactersApi(match.params.character).then((character) => {
@@ -22,15 +25,32 @@ export const SearchCharacters = ({ match }) => {
         setNotfound(`Results not found for ${match.params.character}`);
       }
     })
-  }, []);
+  }, [changePage]);
 
   useEffect(() => {
     if (getId) {
-      loadCharactersSearchApi(getId).then((comicsPerCharacter) => {
-        setGetComics(comicsPerCharacter.data.results);
+      loadCharactersSearchApi(getId, changePage).then((comicsPerCharacter) => {
+        setGetComics(comicsPerCharacter.data);
+        console.log(comicsPerCharacter.data.count)
       });
     }
-  }, [getId]);
+  }, [getId, changePage]);
+
+  const handleClickComic = (id) => {
+    history.push(`/detailed/${id}`)
+  }
+
+  const handleClick = (condition) => {
+    if (condition === "Previous") {
+      if (changePage >= 0) {
+        history.push(`/search/${match.params.character}/${changePage-1}`);
+        setChangePage(changePage-1)
+      }
+    } else {
+      history.push(`/search/${match.params.character}/${changePage+1}`);
+      setChangePage(changePage+1)
+    }   
+  };
 
   return (
     <>
@@ -41,8 +61,8 @@ export const SearchCharacters = ({ match }) => {
         }
         {getComics &&
           <div className="max-width-main">
-            {getComics.map((eachComic, index) => (
-              <div className="each-comic" key={index} >
+            {getComics.results.map((eachComic, index) => (
+              <div className="each-comic" key={index} onClick={() => handleClickComic(eachComic.id)}>
                 <img
                   alt={eachComic.title}
                   src={`${eachComic.thumbnail.path}.${eachComic.thumbnail.extension}`}
@@ -60,6 +80,12 @@ export const SearchCharacters = ({ match }) => {
             ))}
           </div>
         }
+        <FooterComics 
+          previous={handleClick}
+          next={handleClick}
+          page={changePage}
+          count={getComics ? getComics.count : 10}
+        />
         <ReturnPage />
       </section>
     </>

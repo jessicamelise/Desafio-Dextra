@@ -220,7 +220,7 @@
   }
   .max-width-main{
     flex-flow: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .each-comic{
     width: 18%;
