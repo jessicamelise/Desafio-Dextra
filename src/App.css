@@ -13,7 +13,7 @@
   src: url("./assets/Roboto-BoldCondensed.ttf");
 }
 
-.header{
+.header {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -25,7 +25,7 @@
   z-index: 3;
 }
 
-.max-width{
+.max-width {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -33,7 +33,7 @@
   width: 100%;
 }
 
-.logo{
+.logo {
   color: white;
   font-family: "Marvel";
   font-size: 40px;
@@ -42,7 +42,7 @@
   align-self: flex-end;
 }
 
-.label-header{
+.label-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,7 +52,7 @@
   border-radius: 2px;
 }
 
-.input-header{
+.input-header {
   width: 85%;
   border: none;
   font-family: "Roboto-Body";
@@ -61,23 +61,23 @@
   outline: none;
 }
 
-.search-icon{
+.search-icon {
   width: 25px;
   cursor: pointer;
 }
 
-::placeholder{
+::placeholder {
   color: rgba(239, 19, 29, 0.6);
 }
 
-.main-comics{
+.main-comics {
   margin-top: 70px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.max-width-main{
+.max-width-main {
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -85,12 +85,12 @@
   align-self: center;
 }
 
-.thumbnails{
+.thumbnails {
   width: 80%;
   cursor: pointer;
 }
 
-.each-comic{
+.each-comic {
   width: 100%;
   text-align: center;
   margin-bottom: 25px;
@@ -101,7 +101,7 @@
   color: rgb(239, 19, 29);
 }
 
-.list-creator{
+.list-creator {
   list-style: none;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .p-margin {
- margin: 0px;
+  margin: 0px;
 }
 
 .p-font-bold {
@@ -163,7 +163,7 @@
   cursor: pointer;
 }
 
-.return-icon:hover{
+.return-icon:hover {
   transform: scale(1.1);
 }
 
@@ -201,49 +201,49 @@
 }
 
 @media only screen and (min-width: 800px) {
-  .header{
+  .header {
     height: 100px;
   }
-  .logo{
+  .logo {
     font-size: 80px;
   }
-  .input-header{
+  .input-header {
     font-size: 15px;
     width: 90%;
   }
-  .search-icon{
+  .search-icon {
     width: 45px;
   }
-  .main-comics{
+  .main-comics {
     margin-top: 120px;
     justify-content: center;
   }
-  .max-width-main{
+  .max-width-main {
     flex-flow: wrap;
     justify-content: space-around;
   }
-  .each-comic{
+  .each-comic {
     width: 18%;
     margin-bottom: 10px;
   }
-  .thumbnails{
+  .thumbnails {
     height: 65%;
     width: 100%;
   }
   .max-width-button {
     width: 30%;
   }
-  .button-comics{
+  .button-comics {
     width: 40%;
   }
-  .return-icon{
+  .return-icon {
     width: 5%;
   }
-  .max-width-return{
+  .max-width-return {
     flex-direction: row;
     text-align: left;
   }
-  .width-aside{
+  .width-aside {
     width: 100%;
   }
 }

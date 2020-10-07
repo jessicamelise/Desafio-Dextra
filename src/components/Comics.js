@@ -1,16 +1,16 @@
 import React from 'react';
 import '../App.css';
-import { Header } from "../components/Header";
-import { FooterComics } from "./FooterComics.js";
-import { ComicsList } from "./ComicsList.js";
-import { useHistory } from "react-router-dom";
+import { Header } from '../components/Header';
+import { FooterComics } from './FooterComics.js';
+import { ComicsList } from './ComicsList.js';
+import { useHistory } from 'react-router-dom';
 
 export const Comics = ( { match } ) => {
   let changePage = parseInt(match.params.page) || 0;
   let history= useHistory();
 
   const handleClick = (condition) => {
-    if (condition === "Previous") {
+    if (condition === 'Previous') {
       if (changePage >= 0) {
         history.push(`/home/${changePage-1}`);
       }

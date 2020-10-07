@@ -1,8 +1,8 @@
 import React from 'react';
-import { Switch, Route, HashRouter, Redirect } from "react-router-dom";
-import { Comics } from "../components/Comics";
-import { DetailedComics } from "../components/DetailedComics";
-import { SearchCharacters } from "../components/SearchCharacters";
+import { Switch, Route, HashRouter, Redirect } from 'react-router-dom';
+import { Comics } from '../components/Comics';
+import { DetailedComics } from '../components/DetailedComics';
+import { SearchCharacters } from '../components/SearchCharacters';
 
 function App() {
 
@@ -10,11 +10,11 @@ function App() {
     <HashRouter>
       <Switch>
         <Redirect exact from='/' to='/home'/>
-        <Route path="/home" exact={true} component={Comics} />
-        <Route path="/home/:page" component={Comics} />
-        <Route path="/detailed/:id" component={DetailedComics} />
-        <Route path="/search/:character" component={SearchCharacters} />
-        <Route path="/search/:character/:page" component={SearchCharacters} />      
+        <Route path='/home' exact={true} component={Comics} />
+        <Route path='/home/:page' component={Comics} />
+        <Route path='/detailed/:id' component={DetailedComics} />
+        <Route path='/search/:character' component={SearchCharacters} />
+        <Route path='/search/:character/:page' component={SearchCharacters} />      
       </Switch>
     </HashRouter>
   );
