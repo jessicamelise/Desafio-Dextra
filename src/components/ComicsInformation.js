@@ -15,7 +15,6 @@ export const ComicsInformation = (props) => {
   useEffect(() => {
     loadComicCharactersApi(props.path.id).then((characters) => {
       setInfCharacters(characters.data.results);
-      console.log(characters.data.results)
     });
   }, []);
 

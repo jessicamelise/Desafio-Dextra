@@ -11,7 +11,7 @@ export const DetailedComics = ({ match }) => {
       <Header />
       <section className="main-comics">
         <ComicsInformation path={match.params}/>
-        <ReturnPage />
+        <ReturnPage return = "goBack"/>
       </section>
     </>
   );

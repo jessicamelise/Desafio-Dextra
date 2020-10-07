@@ -1,28 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from './Input.js';
 import '../App.css';
 import search from '../assets/search.svg'
+import { useHistory, useLocation } from 'react-router-dom';
 
 export const Header = () => {
-    // const [characters, setCharacters] = useState("");
+  const [getSearch, setGetSearch] = useState("");
+  let history = useHistory();
+  let location = useLocation();
 
-    // const handleSearchCharacters = (e) => {
-    //     setCharacters(e.target.value);
-    //   };
- 
+  const handleChange = (e) => {
+    setGetSearch(e.target.value);
+  };
+
+  const handleClick = () => {
+    history.push(`/search/${getSearch}`)
+  };
+
   return (
     <header className="header">
-        <section className="max-width">
-            <p className="logo">MARVEL</p>
-            <label className="label-header">
-            <Input 
-                className="input-header" 
-                placeholder="Pesquise personagens..."
-                // onBlur={handleSearchCharacters}
+      <section className="max-width">
+        <p className="logo">MARVEL</p>
+        {location.pathname.split("/")[1] === "home" &&
+          <label className="label-header">
+            <Input
+              className="input-header"
+              placeholder="Search for characters"
+              onChange={handleChange}
             />
-            <img className="search-icon" alt="search" src={search}></img>
-            </label>
-        </section>
+            <img 
+              className="search-icon" 
+              alt="search" 
+              src={search} 
+              onClick={handleClick}></img>
+          </label> 
+        }
+      </section>
     </header>
   );
 }
