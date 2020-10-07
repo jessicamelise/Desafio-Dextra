@@ -64,6 +64,7 @@ https://jessicamelise.github.io/Desafio-Dextra/
 - Adição de biblioteca para CSS
 - Correção de bug da página de pesquisa detalhada que está voltando sempre para a tela inicial da pesquisa
 - Deixar HTML mais semântico
+- Colocar condição de esconder botão Next na lista de comics geral quando chegar na última página
 
 
 ## Autor
