@@ -17,15 +17,13 @@ export const SearchCharacters = ({ match }) => {
     loadCharactersApi(match.params.character).then((character) => {
       if (character.data.results.length !== 0) {
         let array = [];
-        character.data.results.map((eachName) => {
-          array.push(eachName.id);
-        });
+        character.data.results.map(eachName => array.push(eachName.id));
         setGetId(array.join(','));
       } else {
         setNotfound(`Results not found for ${match.params.character}`);
       }
     })
-  }, []);
+  }, []); // eslint-disable-line
 
   useEffect(() => {
     if (getId) {

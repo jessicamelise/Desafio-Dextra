@@ -10,13 +10,13 @@ export const ComicsInformation = (props) => {
     loadComicIdApi(props.path.id).then((comic) => {
       setInfComic(comic.data.results[0]);
     });
-  }, []);
+  }, []); // eslint-disable-line
 
   useEffect(() => {
     loadComicCharactersApi(props.path.id).then((characters) => {
       setInfCharacters(characters.data.results);
     });
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <div className='max-width-return'>
