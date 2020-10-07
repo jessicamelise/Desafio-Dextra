@@ -11,7 +11,7 @@ function App() {
         <Redirect exact from='/' to='/home'/>
         <Route path="/home" exact={true} component={Comics} />
         <Route path="/home/:page" component={Comics} />
-        <Route path="/detailed" component={DetailedComics} />        
+        <Route path="/detailed/:id" component={DetailedComics} />        
       </Switch>
     </HashRouter>
   );
