@@ -25,7 +25,7 @@ export const SearchCharacters = ({ match }) => {
         setNotfound(`Results not found for ${match.params.character}`);
       }
     })
-  }, [changePage]);
+  }, [history]);
 
   useEffect(() => {
     if (getId) {
@@ -60,33 +60,35 @@ export const SearchCharacters = ({ match }) => {
           <p>{notFound}</p>
         }
         {getComics &&
-          <div className="max-width-main">
-            {getComics.results.map((eachComic, index) => (
-              <div className="each-comic" key={index} onClick={() => handleClickComic(eachComic.id)}>
-                <img
-                  alt={eachComic.title}
-                  src={`${eachComic.thumbnail.path}.${eachComic.thumbnail.extension}`}
-                  className="thumbnails"
-                >
-                </img>
-                <p className="p-margin p-font-bold">{eachComic.title}</p>
-                {eachComic.creators.items.length === 0 ?
-                  <p className="p-margin"></p> :
-                  <p className="p-margin p-font-body">
-                    {eachComic.creators.items.map((creator, index) => <span className="list-creator" key={index}>{creator.name}/ </span>)}
-                  </p>
-                }
-              </div>
-            ))}
-          </div>
+          <>
+            <div className="max-width-main">
+              {getComics.results.map((eachComic, index) => (
+                <div className="each-comic" key={index} onClick={() => handleClickComic(eachComic.id)}>
+                  <img
+                    alt={eachComic.title}
+                    src={`${eachComic.thumbnail.path}.${eachComic.thumbnail.extension}`}
+                    className="thumbnails"
+                  >
+                  </img>
+                  <p className="p-margin p-font-bold">{eachComic.title}</p>
+                  {eachComic.creators.items.length === 0 ?
+                    <p className="p-margin"></p> :
+                    <p className="p-margin p-font-body">
+                      {eachComic.creators.items.map((creator, index) => <span className="list-creator" key={index}>{creator.name}/ </span>)}
+                    </p>
+                  }
+                </div>
+              ))}
+            </div>
+            <FooterComics 
+            previous={handleClick}
+            next={handleClick}
+            page={changePage}
+            count={getComics ? getComics.count : 10}
+            />
+          </>
         }
-        <FooterComics 
-          previous={handleClick}
-          next={handleClick}
-          page={changePage}
-          count={getComics ? getComics.count : 10}
-        />
-        <ReturnPage />
+        <ReturnPage return = "initial"/>
       </section>
     </>
   );
