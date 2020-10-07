@@ -31,7 +31,6 @@ export const SearchCharacters = ({ match }) => {
     if (getId) {
       loadCharactersSearchApi(getId, changePage).then((comicsPerCharacter) => {
         setGetComics(comicsPerCharacter.data);
-        console.log(comicsPerCharacter.data.count)
       });
     }
   }, [getId, changePage]);
