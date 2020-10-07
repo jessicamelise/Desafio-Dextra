@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
-import { loadComicIdApi, loadComicCharactersApi } from "../loadApis/api.js";
+import { loadComicIdApi, loadComicCharactersApi } from '../loadApis/api.js';
 
 export const ComicsInformation = (props) => {
   const [infComic, setInfComic] = useState(null);
@@ -19,11 +19,15 @@ export const ComicsInformation = (props) => {
   }, []);
 
   return (
-    <div className="max-width-return">
+    <div className='max-width-return'>
       {infComic &&
         <>
           <section>
-            <img className="img-detailed" alt={infComic.title} src={`${infComic.thumbnail.path}.${infComic.thumbnail.extension}`}></img>
+            <img 
+              className="img-detailed" 
+              alt={infComic.title} 
+              src={`${infComic.thumbnail.path}.${infComic.thumbnail.extension}`}
+            ></img>
           </section>
           <aside className="width-aside">
             <h1 className="font-roboto-title font-size-title">{infComic.title}</h1>
