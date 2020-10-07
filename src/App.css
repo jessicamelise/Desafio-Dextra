@@ -149,6 +149,57 @@
   display: none;
 }
 
+.max-width-return {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-self: center;
+  text-align: center;
+}
+
+.return-icon {
+  width: 15%;
+  cursor: pointer;
+}
+
+.return-icon:hover{
+  transform: scale(1.1);
+}
+
+.img-detailed {
+  width: 95%;
+}
+
+.width-aside {
+  width: 100%;
+}
+
+.font-roboto-title {
+  font-family: "Roboto-Title";
+}
+
+.font-roboto-body {
+  font-family: "Roboto-Body";
+}
+
+.font-size-margin {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.font-size-body {
+  font-size: 12px;
+}
+
+.font-marvel {
+  font-family: "Marvel";
+}
+
+.font-size-title {
+  font-size: 25px;
+}
+
 @media only screen and (min-width: 800px) {
   .header{
     height: 100px;
@@ -184,5 +235,15 @@
   }
   .button-comics{
     width: 40%;
+  }
+  .return-icon{
+    width: 5%;
+  }
+  .max-width-return{
+    flex-direction: row;
+    text-align: left;
+  }
+  .width-aside{
+    width: 100%;
   }
 }
